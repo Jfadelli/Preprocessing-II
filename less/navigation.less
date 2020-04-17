@@ -1,1 +1,25 @@
 // Navigation Styles here
+.nav-bar{
+  margin: 1rem;
+  .flex(@justify:space-between);
+  border-bottom: 2px dashed @navigation-border;
+
+  @media @mobile{
+    .flex(@direction:column);
+
+    h2{
+      font-size: 4rem;
+      font-weight: 600
+    }
+  }
+}
+.nav-link{
+  .flex(@justify:space-between, @direction: row);
+  width:60%;
+  font-size: 1.5rem;   
+   
+  @media @mobile{
+    .flex(@direction:row, @justify:space-around);
+    width: 100%;
+    } 
+}
